@@ -1,6 +1,0 @@
-src folder strictly includes
-- html files
-- pug, haml, etc
-
-follow the rscss (http://rscss.io) guidelines in
-naming css/javascript classes, files, id, etc
