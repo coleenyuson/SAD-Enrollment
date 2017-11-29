@@ -4,9 +4,84 @@
 		<!-- Required meta tags -->
     	<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-````````<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="01-css/bootstrap.css" rel="stylesheet" type="text/css" />
+		<link href="01-css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+		<link href="01-css/normalize.css" rel="stylesheet" type="text/css" />
+	<style>
+		html{
+			font-family: Helvetica, sans-serif;
+		}
+		h1{
+			font-size: 29px;
+		}
+		h2{
+			font-size: 24px;
+		}
+		h3{
+			font-size: 20px;
+		}
+		h4{
+			font-size: 16px;
+		}
+		h5, p{
+			font-size: 14px;
+		}
+		.container {
+		  background-color: #FFFFFF;
+		  padding-top: 50px;
+		  display: flex;
+		  flex-flow: row wrap;
+		  -webkit-justify-content: center;
+		          justify-content: center;
+		}
+		.container > .title{
+			font-family: Helvetica-Bold;
+			color: #121774;
+			letter-spacing: -1px;
+			margin-left: 25px;
+			text-transform: uppercase;
+			order: 0;
+		}
+		.form-input{
+			background: #F4F4F4;
+			box-shadow: 0 2px 25px 0 #C2E1EE;
+			border-radius: 26px 26px 0 0;
+			width: 413px;
+			height: 350px;
+			position:relative;
+		}
+		.form-input > .btn-login{
+			background: #4285F4;
+			box-shadow: 0 2px 25px 0 rgba(194,225,238,0.50);
+			text-transform: uppercase;
+			border-radius: 0 0 26px 26px;
+			width:413px;
+			height:80px;
+			position:absolute;
+			bottom:0;
+			text-align: center;
+		}
+		.btn-login > h3{
+			text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+			font-family: Helvetica;
+			font-size: 20px;
+			color: #FFFFFF;
+			letter-spacing: 1.05px;
+			text-shadow: 0 2px 6px rgba(0,0,0,0.15);
+			margin: 28px 168px;
+		}
+
+	</style>
 	</head>
 	<body>
+		<div class="container">
+			<img src="03-images/logo.jpg" width="90px" height="90px"/>
+			<h2 class="title"> Maryknoll Academy <br/> of Cateel <br/> Enrollment System </h2>
+		</div>
+		<div class="container">
+			<div class="form-input">
+				<div class="btn-login"><h3>log in</h3></div>
+			</div>
+		</div>
 	</body>
 </html>
