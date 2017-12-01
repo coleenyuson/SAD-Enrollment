@@ -18,6 +18,7 @@ h5, p{
 }
 button{
 	border:0;
+	cursor: pointer;
 }
 
 /* */
@@ -111,12 +112,10 @@ input{
 	width: 120px;
 	height: 40px;
 	color: #FFFFFF;
-	cursor: pointer;
 	transition: all 0.5s;
 	padding: 10px;
 }
 .btn-logout span {
-  cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
@@ -150,15 +149,19 @@ input{
 .btn-links{
 	width: 300px;
 	height: 160px;
-	background: #FFFFFF;
-	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.08);
+	background: #F6F6F6;
 	border-radius: 5px;
+	border: 1px solid #D2D2D2;
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.08);
+	margin-top: 30px;
 }
 .announcements{
 	width: 300px;
 	height: 500px;
 	background: #FFFFFF;
 	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.08);
+	float: right;
+	margin-top: 30px;
 }
 .content-heading{
 	font-family: Helvetica-Light;
@@ -169,6 +172,5 @@ input{
 	margin-bottom: 0;
 }
 .content-heading h4{
-	margin-bottom: 30px;
 	padding-top: 0;
 }
