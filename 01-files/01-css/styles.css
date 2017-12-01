@@ -142,6 +142,7 @@ input{
 }
 .bg-content{
 	background-color: #F8FAFF;
+
 }
 .content{
 	padding: 40px;
@@ -149,11 +150,15 @@ input{
 .btn-links{
 	width: 300px;
 	height: 160px;
-	background: #F6F6F6;
+	/*background: #F6F6F6;
 	border-radius: 5px;
 	border: 1px solid #D2D2D2;
-	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.08);
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.08);*/
 	margin-top: 30px;
+	background: #132B51;
+	box-shadow: 0 4px 4px 0 rgba(0,0,0,0.08);
+	border-radius: 5px;
+	padding: 30px;
 }
 .announcements{
 	width: 300px;
@@ -173,4 +178,19 @@ input{
 }
 .content-heading h4{
 	padding-top: 0;
+}
+.quick-links-icons{
+	font-size: 60px;
+	color: #4688F1;
+}
+.quick-links h4{
+	font-family: Helvetica-Bold;
+	color: #FFFFFF;
+	margin-top: 20px;
+}
+.quick-links h3{
+	font-family: Helvetica-Bold;
+	margin-top: 40px;
+	margin-left: 20px;
+	color: #A4A4A4;
 }
