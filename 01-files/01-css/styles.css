@@ -229,4 +229,5 @@ button{
 .modal-body label{
 	font-weight: bold;
 	color: #7A869A;
+	margin-top: 10px;
 }
