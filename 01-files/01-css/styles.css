@@ -31,12 +31,11 @@ button{
           justify-content: center;
 }
 .container > .title{
-	font-family: Helvetica-Bold;
 	color: #121774;
-	letter-spacing: -1px;
 	margin-left: 25px;
 	text-transform: uppercase;
 	order: 0;
+	font-weight: bold;
 }
 .form-input{
 	background: #F4F4F4;
@@ -63,7 +62,6 @@ button{
 }
 .btn-login > h3{
 	text-shadow: 0 2px 6px rgba(0,0,0,0.15);
-	font-family: Helvetica;
 	font-size: 20px;
 	color: #FFFFFF;
 	letter-spacing: 1.05px;
@@ -83,18 +81,17 @@ button{
 	margin-bottom: 30px;
 }
 .placeholder{
-	font-family: Helvetica-Bold;
 	color: #A4A4A4;
 	letter-spacing: 0;
-	line-height: 20px;
+	margin-top: 10px;
 }
 #forgot-user{
-	font-family: Helvetica-Light;
 	font-size: 14px;
 	color: #4285F4;
 	letter-spacing: 0.5px;
 	text-align: center;
 	margin-top: 30px;
+	font-weight: 100;
 }
 
 
@@ -169,7 +166,6 @@ button{
 	margin-top: 30px;
 }
 .content-heading{
-	font-family: Helvetica-Light;
 	color: #A4A4A4;
 	letter-spacing: 0;
 }
@@ -184,12 +180,10 @@ button{
 	color: #4688F1;
 }
 .quick-links h4{
-	font-family: Helvetica-Bold;
 	color: #FFFFFF;
 	margin-top: 20px;
 }
 .quick-links h3{
-	font-family: Helvetica-Bold;
 	margin-top: 40px;
 	margin-left: 20px;
 	color: #A4A4A4;
