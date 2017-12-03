@@ -21,7 +21,7 @@ button{
 	cursor: pointer;
 }
 
-/* */
+/* index.html */
 .container {
   background-color: #FFFFFF;
   padding-top: 50px;
@@ -46,7 +46,7 @@ button{
 	height: 375px;
 	position:relative;
 }
-.form-input > button{
+.form-input > .btn-login{
 	background: #4285F4;
 	text-transform: uppercase;
 	border-radius: 0 0 26px 26px;
@@ -58,10 +58,10 @@ button{
 	-webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
 }
-.form-input button:hover{
+.form-input .btn-login:hover{
 	box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
 }
-button > h3{
+.btn-login > h3{
 	text-shadow: 0 2px 6px rgba(0,0,0,0.15);
 	font-family: Helvetica;
 	font-size: 20px;
@@ -69,10 +69,10 @@ button > h3{
 	letter-spacing: 1.05px;
 	margin: 28px 160px;
 }
-form{
+.form-login{
 	padding:28px;
 }
-input{
+.input-login{
 	background: #F7F8F9;
 	border: 1px solid rgba(122,134,154,0.39);
 	border-radius: 8px;
@@ -98,7 +98,7 @@ input{
 }
 
 
-/* dashboard */
+/* dashboard template*/
 .active{
 	border-bottom: 3px solid #4688F1;
     color: #4688F1;
@@ -193,4 +193,40 @@ input{
 	margin-top: 40px;
 	margin-left: 20px;
 	color: #A4A4A4;
+}
+.btn-links:hover {
+    opacity: 0.9;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+/* Financial Records */
+.table-records{
+	padding-left: 15px;
+	margin-top: 30px;
+}
+.search-bar{
+
+}
+.active-status{
+	margin-right: 3px;
+    font-size: 10px;
+    color: #36B37E;
+}
+.inactive-status{
+	margin-right: 3px;
+    font-size: 10px;
+    color: #DE350A;
+}
+.table-records tr:hover{
+	cursor: pointer;
+}
+.add-button{
+	margin-right: 15px;
+}
+.view-button{
+	width: 100px !important;
+}
+.modal-body label{
+	font-weight: bold;
+	color: #7A869A;
 }
