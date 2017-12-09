@@ -20,7 +20,12 @@ button{
 	border:0;
 	cursor: pointer;
 }
-
+nav{
+	padding-bottom:0 !important;
+}
+nav .active{
+	padding-bottom: 10px !important;
+}
 /* index.html */
 .container {
   background-color: #FFFFFF;
@@ -139,7 +144,7 @@ button{
 }
 .bg-content{
 	background-color: #F8FAFF;
-
+	/*background-color: #f2f2f2;*/
 }
 .content{
 	padding: 40px;
@@ -224,4 +229,18 @@ button{
 	font-weight: bold;
 	color: #7A869A;
 	margin-top: 10px;
+}
+
+/* USER RECORD */
+.card{
+	padding: 30px;
+}
+.records{
+	margin-top: 30px;
+}
+.link{
+	color: #000000;
+}
+.modal{
+	box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24) !important;
 }
