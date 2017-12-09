@@ -219,7 +219,7 @@ nav .active{
 .table-records tr:hover{
 	cursor: pointer;
 }
-.add-button{
+.add-button,.print{
 	margin-right: 15px;
 }
 .view-button{
