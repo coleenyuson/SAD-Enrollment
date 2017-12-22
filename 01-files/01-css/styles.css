@@ -244,3 +244,11 @@ nav .active{
 .modal{
 	box-shadow: 0 12px 36px 16px rgba(0, 0, 0, 0.24) !important;
 }
+
+/* SETTINGS */
+.grey{
+	color: #777777;
+}
+.margin{
+	margin-bottom: 30px;
+}
