@@ -50,7 +50,7 @@ nav .active{
 	height: 375px;
 	position:relative;
 }
-.form-input > .btn-login{
+.btn-login{
 	background: #4285F4;
 	text-transform: uppercase;
 	border-radius: 0 0 26px 26px;
@@ -62,7 +62,7 @@ nav .active{
 	-webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
 }
-.form-input .btn-login:hover{
+.btn-login:hover{
 	box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19)
 }
 .btn-login > h3{
@@ -251,4 +251,10 @@ nav .active{
 }
 .margin{
 	margin-bottom: 30px;
+}
+
+
+.sm-headings{
+	margin-top: 20px;
+	font-weight: bold;
 }
