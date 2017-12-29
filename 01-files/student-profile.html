@@ -47,7 +47,7 @@
     <!-- CONTENT -->
     <div class="container-fluid bg-content">
       <div class="content"> 
-        <a href="student-registration.html"><h4><i class="fa fa-angle-left" aria-hidden="true"></i> Back to records list</h4></a>
+        <a href="student-registration-list.html"><h4><i class="fa fa-angle-left" aria-hidden="true"></i> Back to records list</h4></a>
         <div class="card">
           <div class="card-block">
             <div class="row">
@@ -106,69 +106,95 @@
                               Record successfully added!
                             </div>-->
                             <div class="row">
-                              <div class="col-md-6">
+                              <div class="col-md-4">
+                                <label>Student ID:</label>
+                                <p class="form-control-static">0001</p><!--incremental-->
+                              </div>
+                              <div class="col-md-4">
+                                <label>Student Name:</label>
+                                <p class="form-control-static">Brown, Millie-Bobbie</p><!--incremental-->
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4">
                                 <label>Enrollment ID:</label>
                                 <p class="form-control-static">0003</p><!--incremental-->
                               </div>
+                              <div class="col-md-4">
+                                <label>Student Type:</label>
+                                <p class="form-control-static">Grade School</p><!--incremental-->
+                              </div>
                             </div>
                             <div class="row">
                               <div class="col-md-6">
-                                <label>Month:</label><br/>
+                                <label>Curriculum Year:</label><br/>
                                 <select class="custom-select btn-block" required>
-                                  <option selected>Pick a month..</option>
-                                  <option value="1">May</option>
-                                  <option value="2">June</option>
-                                  <option value="3">July</option>
-                                  <option value="4">August</option>
-                                  <option value="5">September</option>
-                                  <option value="6">October</option>
-                                  <option value="7">November</option>
-                                  <option value="8">December</option>
-                                  <option value="9">January</option>
-                                  <option value="10">February</option>
-                                  <option value="11">March</option>
-                                  <option value="12">April</option>
+                                  <option selected>Choose a curriculum..</option>
+                                  <option value="1">2015</option>
+                                  <option value="2">2016</option>
+                                  <option value="3">2017</option>
+                                  <!-- Values should be from the curriculum years stored in database (ps. idk if this is curriculum ng subjects nila OR curriculum year as in school year-->
                                 </select>
                               </div>
                               <div class="col-md-6">
-                                <label>Date Paid:</label><br/>
-                                <input type="text" class="form-control" name="date" required/>
-                                <!-- DATE PICKER -->
+                                <label for="enrollment-date">Date Enrolled:</label>
+                                <div class="col-10 date-padding-reset">
+                                  <input class="form-control" type="date" value="2018-01-01" id="enrollment-date">
+                                </div>
                               </div>
                             </div>
+                            <h5 class="sm-headings">Scholarships</h5>
                             <div class="row">
                               <div class="col-md-6">
-                                <label>Payment Type:</label><br/>
-                                <select class="custom-select btn-block">
-                                  <option selected>Pick a payment type..</option>
-                                  <option value="1">Cash</option>
-                                  <option value="2">Cheque</option>
-                                  <option value="3">Promissory Note</option>
-                                  <option value="4">Others</option>
-                                </select>
-                              </div>
-                              <div class="col-md-6">
-                                <label>Amount Paid:</label>
-                                <input type="text" class="form-control" required>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <label>Fees Description:</label>
+                                <label>Scholarship Name:</label>
                                 <input type="text" class="form-control">
                               </div>
+                              <div class="col-md-6">
+                                <label>Scholarship Amount:</label>
+                                <input type="number" class="form-control">
+                              </div>
                             </div>
                             <div class="row">
-                              <div class="col-md-6">
-                                <label>Payment Notes:</label>
-                                <textarea class="form-control" rows="3"></textarea>
+                              <div class="col-md-4">
+                                <label>School Year:</label>
+                                <select class="custom-select btn-block" required>
+                                  <option selected>Choose a school year..</option>
+                                  <option value="1">2015-2016</option>
+                                  <option value="2">2016-2017</option>
+                                  <option value="3">2017-2018</option>
+                                  <!-- Values should be from the database SchoolYearID -->
+                                </select>
+                              </div>
+                              <div class="col-md-4">
+                                <label>Scholarship Type:</label>
+                                <select class="custom-select btn-block" required>
+                                  <option selected>Choose a scholarship..</option>
+                                  <option value="1">Academic</option>
+                                  <option value="2">Government</option>
+                                  <option value="3">Athletic</option>
+                                </select>
+                              </div>
+                              <div class="col-md-4">
+                                <label>Scholarship Status:</label>
+                                <div class="custom-controls-stacked">
+                                  <label class="custom-control custom-radio">
+                                    <input id="radioActiveScholarship" name="radio-stacked" type="radio" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Active</span>
+                                  </label>
+                                  <label class="custom-control custom-radio">
+                                    <input id="radioInactiveScholarship" name="radio-stacked" type="radio" class="custom-control-input">
+                                    <span class="custom-control-indicator"></span>
+                                    <span class="custom-control-description">Inactive</span>
+                                  </label>
+                                </div>
                               </div>
                             </div>
                           </form>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
-                          <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#confirmModal">Add financial record</button>
+                          <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#confirmModal">Save Student Registration</button>
                           <div class="modal" id="confirmModal" tabindex="-1" role="dialog">
                               <div class="modal-dialog" role="document">
                                   <div class="modal-content">
@@ -194,7 +220,6 @@
                   </div>
                 </div>
               </div>
-              
             </div>
             <div class="row table-records table-responsive">
               <table class="table table-bordered bg-nav table-hover">
@@ -205,34 +230,31 @@
                     <th scope="col">Curriculum Year</th>
                     <th scope="col">School Year</th>
                     <th scope="col">Year Level</th>
-                    <th scope="col">Section</th>
                     <th scope="col">Date Enrolled</th>
-                    <th scope="col">Scholarship Status</th>
                     <th scope="col">Enrollment Status</th>
+                    <th scope="col">Scholarship Status</th>
                     <th scope="col">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>0001</td>
-                    <td>2018-2019</td>
+                    <td>2015</td>
                     <td>2018-2019</td>
                     <td>Grade 6</td>
-                    <td>St. Nicholas</td>
                     <td>01-07-18</td>
-                    <td><i class="fa fa-circle active-status"></i> Active</td>
                     <td>Enrolled</td>
-                    <td class="text-center"><a href="user-record.html" class="btn btn-secondary btn-sm view-button">View</a><a href="user-record.html" class="btn btn-success btn-sm view-button">Edit</a></td>
+                    <td><i class="fa fa-circle active-status"></i> Active</td>
+                    <td class="text-center"><a href="#" class="btn btn-secondary btn-sm view-button">View</a><a href="#" class="btn btn-success btn-sm view-button">Edit</a></td>
                   </tr>
                   <tr>
                     <td>0002</td>
-                    <td>2018-2019</td>
-                    <td>2018-2019</td>
-                    <td>Grade 6</td>
-                    <td>St. Gabriel</td>
-                    <td>01-07-18</td>
-                    <td><i class="fa fa-circle active-status"></i> Active</td>
+                    <td>2015</td>
+                    <td>2017-2018</td>
+                    <td>Grade 5</td>
+                    <td>01-07-17</td>
                     <td>Enrolled</td>
+                    <td><i class="fa fa-circle inactive-status"></i> Inactive</td>
                     <td class="text-center"><a href="#" class="btn btn-secondary btn-sm view-button">View</a><a href="#" class="btn btn-success btn-sm view-button">Edit</a></td>
                   </tr>
                 </tbody>

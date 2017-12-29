@@ -17,7 +17,6 @@
       <link rel="stylesheet" href="04-fonts/simple-line-icons-master/css/simple-line-icons.css">
       <link rel="stylesheet" href="04-fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
-
   </head>
   <body>
     <!-- NAVBAR -->
@@ -72,7 +71,7 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <button type="button" class="add-button btn btn-primary float-right" data-toggle="modal" data-target="#createStudentProfileModal">Create Student Registration</button>
+            <button type="button" class="add-button btn btn-primary float-right" data-toggle="modal" data-target="#createStudentProfileModal">Create Student Profile</button>
               <div class="modal fade" id="createStudentProfileModal" tabindex="-1" role="dialog" aria-labelledby="#createStudentProfileModal" aria-hidden="true">
                     <div class="modal-dialog modal-lg" role="document">
                       <div class="modal-content">
@@ -91,7 +90,7 @@
                             </div>
                             <div class="row">
                               <div class="col-md-4">
-                                <label>Student ID:</label>
+                              <label>Student ID:</label>
                                 <p class="form-control-static">0009</p><!--incremental-->
                               </div>
                               <div class="col-md-4">
@@ -104,6 +103,16 @@
                                   <option value="3">Other</option>
                                 </select>
                               </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-10">
+                                <label>Student Profile Picture:</label><br>
+                                <label class="custom-file profile-picture">
+                                <input type="file" id="file" class="custom-file-input">
+                                <span class="custom-file-control"></span>
+                                </label>
+                              </div>
+                              
                             </div>
                             <div class="row">
                               <div class="col-md-4">
@@ -127,8 +136,9 @@
                               </div>
                               <div class="col-md-4">
                                 <label>Date of Birth:</label><br/>
-                                <input type="text" class="form-control" name="date" required/>
-                                <!-- DATE PICKER -->
+                                <div class="col-10">
+                                <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                              </div>
                               </div>
                               <div class="col-md-2">
                                 <label>Sex:</label><br/>
