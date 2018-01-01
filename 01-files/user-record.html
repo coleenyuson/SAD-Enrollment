@@ -43,7 +43,9 @@
           </ul>
         </div>
         <span class="navbar-text">Steve Harrington <i class="icon-arrow-down"></i> </span> <!-- User's fullname -->
-        <button class="btn-logout" onclick="location.href='index.html'"><span>Logout</span></button>
+        <a href="index.html">
+          <button class="btn-logout"><span>Logout</span></button>
+        </a>
       </nav>
     </div>
     <!-- NAVBAR -->
@@ -125,8 +127,9 @@
                               </div>
                               <div class="col-md-6">
                                 <label>Date Paid:</label><br/>
-                                <input type="text" class="form-control" name="date" required/>
-                                <!-- DATE PICKER -->
+                                <div class="col-10 date-padding-reset">
+                                  <input class="form-control " type="date" value="2011-08-19" id="example-date-input">
+                                </div>
                               </div>
                             </div>
                             <div class="row">

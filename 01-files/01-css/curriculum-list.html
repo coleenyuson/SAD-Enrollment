@@ -17,7 +17,6 @@
       <link rel="stylesheet" href="04-fonts/simple-line-icons-master/css/simple-line-icons.css">
       <link rel="stylesheet" href="04-fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
-
   </head>
   <body>
     <!-- NAVBAR -->
@@ -72,14 +71,14 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <button type="button" class="add-button btn btn-primary float-right" data-toggle="modal" data-target="#createStudentProfileModal">Create Student Registration</button>
-              <div class="modal fade" id="createStudentProfileModal" tabindex="-1" role="dialog" aria-labelledby="#createStudentProfileModal" aria-hidden="true">
+            <button type="button" class="add-button btn btn-primary float-right" data-toggle="modal" data-target="#createCurriculumYearModal">Create Curriculum Year</button>
+              <div class="modal fade" id="createCurriculumYearModal" tabindex="-1" role="dialog" aria-labelledby="#createCurriculumYearModal" aria-hidden="true">
                     <div class="modal-dialog modal-lg" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h3 class="modal-title" id="labelModal">Create Student Profile</h3>
+                          <h3 class="modal-title" id="labelModal">Create Curriculum Year</h3>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                            <span aria-hidden"true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
@@ -88,10 +87,10 @@
                               <div class="col">
                                 <h3 class="link" style="margin-top: 10px;">Student Information</h3>
                               </div>
-                            </div>
+                            </div>=
                             <div class="row">
                               <div class="col-md-4">
-                                <label>Student ID:</label>
+                              <label>Student ID:</label>
                                 <p class="form-control-static">0009</p><!--incremental-->
                               </div>
                               <div class="col-md-4">
@@ -104,6 +103,16 @@
                                   <option value="3">Other</option>
                                 </select>
                               </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-10">
+                                <label>Student Profile Picture:</label><br>
+                                <label class="custom-file profile-picture">
+                                <input type="file" id="file" class="custom-file-input">
+                                <span class="custom-file-control"></span>
+                                </label>
+                              </div>
+                              
                             </div>
                             <div class="row">
                               <div class="col-md-4">
@@ -127,8 +136,9 @@
                               </div>
                               <div class="col-md-4">
                                 <label>Date of Birth:</label><br/>
-                                <input type="text" class="form-control" name="date" required/>
-                                <!-- DATE PICKER -->
+                                <div class="col-10">
+                                <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                              </div>
                               </div>
                               <div class="col-md-2">
                                 <label>Sex:</label><br/>
@@ -220,7 +230,7 @@
                             </div>
                             <div class="row">
                               <div class="col">
-                                <label>School Last Attended</label>
+                                <label>School Last Attended:</label>
                                 <input type="text" class="form-control">
                               </div>
                             </div>
@@ -366,14 +376,7 @@
       });
     </script>
 
-    <script>
-      var count=1;
-      var add = function(){
-        if(count >= 5) return;
-        $('#addSibs').append('<div class="col-md-6"> <label>Sibling\'s Name</label><input type="text" class="form-control" placeholder="Last name, First name"></div><div class="col-md-6"><label>Year Graduated</label><input type="text" class="form-control" required></div>')
-        count++;
-      };
-    </script>
+    
     <!-- Bootstrap CDN in case something glitches -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>

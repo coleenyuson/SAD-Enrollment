@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <title>Student Profile</title> <!-- change title to user's full name -->
+      <title>Subject Offering</title> <!-- change title to user's full name -->
 
       <!-- globals -->
       <meta charset="utf-8">
@@ -52,124 +52,67 @@
         <a href="student-registration-list.html"><h4><i class="fa fa-angle-left" aria-hidden="true"></i> Back to records list</h4></a>
         <div class="card">
           <div class="card-block">
-            <div class="row">
-              <div class="col">
-                <img src="https://78.media.tumblr.com/038836d16f3555c38955946556113870/tumblr_oyoxeqBH431wuzkhho1_400.png" width="150">
-              </div>
-              <div class="col-md-10">
-                <div class="row">
-                  <div class="col-md-8">
-                    <h1 class="card-title">Millie-Bobbie Brown</h1>
-                  </div>
-                  <div class="col-md-4 float-right">
-                    <br/><!-- bwahaha tricks-->
-                    <a href="#" class="card-link margin"><i class="fa fa-print" aria-hidden="true"></i> Print Student Profile</a>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-4">
-                    <h6 class="card-subtitle mb-2 link">Student ID: <span class="text-muted">0001</span></h6>
-                    <h6 class="card-subtitle link mb-2 ">Student Level:<span class="text-muted">Grade School</span></h6>
-                    <h6 class="card-subtitle mb-2 link">Place of Birth: <span class=" text-muted">Davao City, Philippines</span></h6>
-                    <h6 class="card-subtitle link mb-2 ">Date of Birth: <span class="text-muted">February 19, 2002</span></h6>
-                  </div>
-                  <div class="col-md-4">
-                    <h6 class="card-subtitle link mb-2 ">Sex: <span class="text-muted"> Female</span></h6>
-                    <h6 class="card-subtitle link mb-2 ">Home Address: <span class="text-muted"> 2595 Pearlman Avenue Sudbury, MA</span></h6>
-                    <h6 class="card-subtitle link mb-2 ">Postal Address: <span class="text-muted"> 2595 Pearlman Avenue Sudbury, MA</span></h6>
-                  </div>
-                  <div class="col-md-4">
-                    <h6 class="card-subtitle link mb-2 ">Father's Name: <span class="text-muted"> Han Solo</span></h6>
-                    <h6 class="card-subtitle link mb-2 ">Mother's Name: <span class="text-muted"> Leia Organa</span></h6>
-                    <h6 class="card-subtitle link mb-2 ">Guardian's Name: <span class="text-muted"> Luke Skywalker</span></h6>
-                  </div>
-                </div>
-              </div>
-            </div>
             <div class="row records">
               <div class="col-md-8">
-                <h2>Student Registration</h2>
+                <h2>Subject Offering</h2>
               </div>
               <div class="col-md-4">
                 <div class="float-right">
-                  <button type="button" class="add-button btn btn-primary" data-toggle="modal" data-target="#addModal">Create Student Registration</button>
-                  <div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModal" aria-hidden="true">
+                  <button type="button" class="add-button btn btn-primary float-right" data-toggle="modal" data-target="#createSubjectOfferingModal">Create Subject Offering</button>
+              <div class="modal fade" id="createSubjectOfferingModal" tabindex="-1" role="dialog" aria-labelledby="#createStudentOfferingModal" aria-hidden="true">
                     <div class="modal-dialog modal-lg" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h3 class="modal-title" id="labelModal">Create Student Registration</h3>
+                          <h3 class="modal-title" id="labelModal">Create Subject Offering</h3>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
                           <form>
-                            <!--<div class="alert alert-success success-message" role="alert">
-                              Record successfully added!
-                            </div>-->
                             <div class="row">
                               <div class="col-md-4">
-                                <label>Student ID:</label>
-                                <p class="form-control-static">0001</p><!--incremental-->
-                              </div>
-                              <div class="col-md-4">
-                                <label>Student Name:</label>
-                                <p class="form-control-static">Brown, Millie-Bobbie</p><!--incremental-->
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-4">
-                                <label>Enrollment ID:</label>
+                              <label>Offering ID:</label>
                                 <p class="form-control-static">0003</p><!--incremental-->
                               </div>
                               <div class="col-md-4">
-                                <label>Student Type:</label>
-                                <p class="form-control-static">Grade School</p><!--incremental-->
+                              <label>Curriculum Year:</label>
+                                <p class="form-control-static">2017</p><!--incremental-->
                               </div>
                             </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <label>Curriculum Year:</label><br/>
-                                <select class="custom-select btn-block" required>
-                                  <option selected>Choose a curriculum..</option>
-                                  <option value="1">2015</option>
-                                  <option value="2">2016</option>
-                                  <option value="3">2017</option>
-                                  <!-- Values should be from the curriculum years stored in database (ps. idk if this is curriculum ng subjects nila OR curriculum year as in school year-->
-                                </select>
-                              </div>
-                              <div class="col-md-6">
-                                <label for="enrollment-date">Date Enrolled:</label>
-                                <div class="col-10 date-padding-reset">
-                                  <input class="form-control" type="date" value="2018-01-01" id="enrollment-date">
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <label>Section:</label>
-                                <select class="custom-select btn-block" required>
-                                  <option selected>Choose a section...</option>
-                                  <option value="1">St. Nicholas</option>
-                                  <option value="2">St. O hai Mark</option>
-                                  <option value="3">St. Tommy Wiseau</option>
-                                  <!-- Values should be from the database SectionName -->
-                                </select>
-                              </div>
-                            </div>
-                            <h5 class="sm-headings">Scholarships</h5>
-                            <div class="row">
-                              <div class="col-md-6">
-                                <label>Scholarship Name:</label>
-                                <input type="text" class="form-control">
-                              </div>
-                              <div class="col-md-6">
-                                <label>Scholarship Amount:</label>
-                                <input type="number" class="form-control">
-                              </div>
-                            </div>
+                            <h5 class="sm-headings">Subject Details </h5>
                             <div class="row">
                               <div class="col-md-4">
+                              <label>Subject ID:</label>
+                                <p class="form-control-static">0003</p><!--incremental-->
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <label>Subject Name:</label>
+                                  <input type="text" class="form-control" required>
+                              </div>
+                              <div class="col-md-4">
+                                <label>Schedule:</label>
+                                  <input type="text" class="form-control" required>
+                              </div>
+                              <div class="col-md-2">
+                                <label>Units:</label>
+                                  <input type="number" class="form-control" required>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-6">
+                                <label>Teacher Assigned:</label>
+                                <select class="custom-select btn-block" required>
+                                  <option selected>Choose teacher...</option>
+                                  <option value="1">Kenobi, Obi-wan</option>
+                                  <option value="2">Skywalker, Anakin</option>
+                                  <option value="3">Yoda</option>
+                                </select>
+                                <!-- Database values for Employee ID in Table Offering-->
+                              </div>
+                              <div class="col-md-6">
                                 <label>School Year:</label>
                                 <select class="custom-select btn-block" required>
                                   <option selected>Choose a school year..</option>
@@ -179,25 +122,38 @@
                                   <!-- Values should be from the database SchoolYearID -->
                                 </select>
                               </div>
+                            </div>
+                            <div class="row">
                               <div class="col-md-4">
-                                <label>Scholarship Type:</label>
+                                <label>Year Level:</label>
                                 <select class="custom-select btn-block" required>
-                                  <option selected>Choose a scholarship..</option>
-                                  <option value="1">Academic</option>
-                                  <option value="2">Government</option>
-                                  <option value="3">Athletic</option>
+                                  <option selected>Choose a school year..</option>
+                                  <option value="1">Grade I</option>
+                                  <option value="2">Grade II</option>
+                                  <option value="3">Grade III</option>
+                                  <!-- Values will not be stored, we will use this to query what sections will display on the next dropdown. (Eg. If Grade VI, there are 2 sections that will display in the next dropdown: St. Michael and St. Therese. Hypothetical sections only.) -->
                                 </select>
                               </div>
                               <div class="col-md-4">
-                                <label>Scholarship Status:</label>
+                                <label>Section Assigned:</label>
+                                <select class="custom-select btn-block" required>
+                                  <option selected>Choose a section..</option>
+                                  <option value="1">St. Nicholas</option>
+                                  <option value="2">St. Gabriel</option>
+                                  <option value="3">St. Oh hai Mark</option>
+                                  <!-- Values should be from the sectionID -->
+                                </select>
+                              </div>
+                              <div class="col-md-4">
+                                <label>Subject Status:</label>
                                 <div class="custom-controls-stacked">
                                   <label class="custom-control custom-radio">
-                                    <input id="radioActiveScholarship" name="radio-stacked" type="radio" class="custom-control-input">
+                                    <input id="radioActiveSubject" name="radio-stacked" type="radio" class="custom-control-input">
                                     <span class="custom-control-indicator"></span>
                                     <span class="custom-control-description">Active</span>
                                   </label>
                                   <label class="custom-control custom-radio">
-                                    <input id="radioInactiveScholarship" name="radio-stacked" type="radio" class="custom-control-input">
+                                    <input id="radioInactiveSubject" name="radio-stacked" type="radio" class="custom-control-input">
                                     <span class="custom-control-indicator"></span>
                                     <span class="custom-control-description">Inactive</span>
                                   </label>
@@ -208,7 +164,7 @@
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
-                          <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#confirmModal">Save Student Registration</button>
+                          <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#confirmModal">Save Subject Details</button>
                           <div class="modal" id="confirmModal" tabindex="-1" role="dialog">
                               <div class="modal-dialog" role="document">
                                   <div class="modal-content">
@@ -227,7 +183,7 @@
                                     </div>
                                   </div>
                                 </div>
-                            </div>
+                              </div>
                             </div>
                           </div>
                     </div>
@@ -240,35 +196,32 @@
                 <thead class="thead-light">
                   <tr>
                     <!-- Refer to database for headings -->
-                    <th scope="col">Enrollment ID</th>
-                    <th scope="col">Curriculum Year</th>
-                    <th scope="col">School Year</th>
-                    <th scope="col">Year Level</th>
-                    <th scope="col">Date Enrolled</th>
-                    <th scope="col">Enrollment Status</th>
-                    <th scope="col">Scholarship Status</th>
+                    <th scope="col">Offering ID</th>
+                    <th scope="col">Subject Name</th>
+                    <th scope="col">Teacher Assigned</th>
+                    <th scope="col">Schedule</th>
+                    <th scope="col">Units</th>
+                    <th scope="col">Section Assigned</th>
                     <th scope="col">Actions</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>0001</td>
-                    <td>2015</td>
-                    <td>2018-2019</td>
-                    <td>Grade 6</td>
-                    <td>01-07-18</td>
-                    <td>Enrolled</td><!-- If paid, tag as enrolled. Else, pending-->
-                    <td><i class="fa fa-circle active-status"></i> Active</td>
+                    <td>The Force 101</td>
+                    <td>Skywalker, Luke</td>
+                    <td>9:30 AM - 10:30 AM</td>
+                    <td>3/3</td>
+                    <td>St. Oh hai Mark</td>
                     <td class="text-center"><a href="#" class="btn btn-secondary btn-sm view-button">View</a><a href="#" class="btn btn-success btn-sm view-button">Edit</a></td>
                   </tr>
                   <tr>
                     <td>0002</td>
-                    <td>2015</td>
-                    <td>2017-2018</td>
-                    <td>Grade 5</td>
-                    <td>01-07-17</td>
-                    <td>Enrolled</td>
-                    <td><i class="fa fa-circle inactive-status"></i> Inactive</td>
+                    <td>Jedi Training</td>
+                    <td>Kenobi, Obi-Wan</td>
+                    <td>11:30 AM - 12:30 AM</td>
+                    <td>3/3</td>
+                    <td>St. Gabriel</td>
                     <td class="text-center"><a href="#" class="btn btn-secondary btn-sm view-button">View</a><a href="#" class="btn btn-success btn-sm view-button">Edit</a></td>
                   </tr>
                 </tbody>

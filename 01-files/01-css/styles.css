@@ -253,8 +253,18 @@ nav .active{
 	margin-bottom: 30px;
 }
 
-
+/* Student Profile */
 .sm-headings{
 	margin-top: 20px;
 	font-weight: bold;
+}
+.profile-picture {
+	margin-top: 0 !important;
+	font-weight: normal !important;
+}
+.custom-file-input{
+	cursor: pointer;
+}
+.date-padding-reset{
+	padding-left: 0 !important;
 }
