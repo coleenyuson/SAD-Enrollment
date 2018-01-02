@@ -268,3 +268,28 @@ nav .active{
 .date-padding-reset{
 	padding-left: 0 !important;
 }
+
+/* promissory form template*/
+.container .form-padding {
+	padding-bottom: 50px;
+}
+.form-margin {
+	margin-bottom: 10px;
+}
+.form-heading{
+	color: #A4A4A4;
+	letter-spacing: 0;
+}
+.form-heading h1{
+	margin-bottom: 0;
+}
+.form-heading h4{
+	padding-top: 0;
+	padding-bottom: 5px;
+}
+.btn:hover {
+	color: #FFFFFF;
+	background-color: #4285F4;
+	transition: 0.5s;
+	opacity: 1;
+}
