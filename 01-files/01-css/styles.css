@@ -23,7 +23,7 @@ button{
 nav{
 	padding-bottom:0 !important;
 }
-nav .active{
+nav .active-menu{
 	padding-bottom: 10px !important;
 }
 /* index.html */
@@ -101,7 +101,7 @@ nav .active{
 
 
 /* dashboard template*/
-.active{
+.active-menu{
 	border-bottom: 3px solid #4688F1;
     color: #4688F1;
     padding-bottom:1px;
@@ -267,4 +267,7 @@ nav .active{
 }
 .date-padding-reset{
 	padding-left: 0 !important;
+}
+.pagination{
+	justify-content: center;
 }
