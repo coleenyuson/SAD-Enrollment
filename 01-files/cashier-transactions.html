@@ -46,90 +46,99 @@
     </div>
     <!-- NAVBAR -->
     <!-- CONTENT -->
-    <div class="margin-top" style="margin-top:50px">
-    </div>  
-    <div class="container-fluid bg-content">
-      <div class="container-fluid">
-        <div class="col">
-        <div class="row">
-          <div class="col-sm-8">
-            <div class="card">
-              <div class="card-header">
-                Payment Transaction
-              </div>
-              <div class="card-block">
-              <div id="container" style="margin-top: 15px;">
-                 <div class="row search-bar">
-                  <div class="col-lg-6">
-                    <div class="input-group">
-                      <div class="input-group-btn">
-                        <button id="selected" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Category
-                        </button>
-                        <!-- Supply dropdown menu categories, refer to database -->
-                        <div class="dropdown-menu">
-                          <a class="dropdown-item" href="#">All categories</a>
-                          <a class="dropdown-item" href="#">Miscellaneous</a>
-                          <a class="dropdown-item" href="#">Books</a>
-                          <a class="dropdown-item" href="#">Others</a>
+    <div class="margin-top" style="margin-top:50px"> </div>
+      <div class="container-fluid bg-content">
+        <div class="container-fluid">
+          <div class="col">
+            <div class="row">
+
+              <div class="col-sm-8">
+                <div class="card">
+                  <div class="card-header">
+                    Payment Transaction
+                  </div>
+
+                  <div class="card-block">
+                    <div id="container" style="margin-top: 15px">
+                      <div class="col-lg-6" style="padding-left: 0">
+                        <div class="input-group">
+                          <div class="input-group-btn">
+                            <button id="selected" type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              Category
+                            </button>
+                            <!-- Supply dropdown menu categories, refer to database -->
+                            <div class="dropdown-menu">
+                              <a class="dropdown-item" href="#">All categories</a>
+                              <a class="dropdown-item" href="#">Miscellaneous</a>
+                              <a class="dropdown-item" href="#">Books</a>
+                              <a class="dropdown-item" href="#">Others</a>
+                            </div>
+                          </div>
+                          <input type="text" class="changeIfStatus form-control" placeholder="Search a particular..." aria-label="Search a particular...">
+                          <span class="input-group-btn">
+                            <button type="button" class="btn btn-primary"> <i class="icon-magnifier"> </i> </button>
+                          </span>
                         </div>
                       </div>
-                      <input type="text" class="changeIfStatus form-control" placeholder="Search a particular..." aria-label="Search a particular...">
-                      <span class="input-group-btn">
-                        <button type="button" class="btn btn-primary"> <i class="icon-magnifier"> </i> </button>
-                      </span>
+                    </div>
+                    <div class="row table-records table-responsive">
+                      <table class="table table-bordered bg-nav table-hover">
+                        <thead class="thead-light">
+                          <tr>
+                            <!-- Refer to database for headings -->
+                            <th scope="col">Code</th>
+                            <th scope="col">Particular</th>
+                            <th scope="col">Price</th>
+                            <th scope="col">Qty.</th>
+                            <th scope="col">Total</th>
+                            <th scope="col"> </th>
+                          </tr>
+                        </thead>  
+                        <tbody>
+                          <tr>
+                              <td> 001 </td>
+                              <td> Enrollment Fee </td>
+                              <td> ₱ 10,580.00 </td>
+                              <td> 1 </td>
+                              <td> ₱ 10,580.00 </td>
+                              <td> <a href="user-profile.html" class="btn btn-secondary btn-sm view-button">View</a> </tr>
+                          </tr>
+                          <tr>
+                              <td>  </td>
+                              <td>  </td>
+                              <td>  </td>
+                              <td>  </td>
+                              <td>  </td>
+                              <td> <button type="button" class="btn btn-danger" style="margin-left:30px"> <i class="fa fa-close"> </i> </button> </tr>
+                          </tr>
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="row table-records table-responsive">
-                <table class="table table-bordered bg-nav table-hover">
-                  <thead class="thead-light">
-                    <tr>
-                      <!-- Refer to database for headings -->
-                      <th scope="col">Code</th>
-                      <th scope="col">Particular</th>
-                      <th scope="col">Price</th>
-                      <th scope="col">Qty.</th>
-                      <th scope="col">Total</th>
-                      <th scope="col"> </th>
-                    </tr>
-                  </thead>  
-                  <tbody>
-                    <form class="" method="" id="transaction">
-                    <tr>
-                      
-                        <td> 001 </td>
-                        <td> <input type="text" class="form-control" id="particularID" name="particularID" value="Enrollment Fee" readonly> </td>
-                        <td> ₱ 10,580.00 </td>
-                        <td> 1 </td>
-                        <td> ₱ 10,580.00 </td>
-                        <td> <button type="button" class="btn btn-danger" style="margin-left:30px"> <i class="fa fa-close"> </i> </button> </tr>
-                      
-                    </tr>
-                    <tr>
-                      
-                        <td>  </td>
-                        <td> <input type="text" class="form-control" id="particularID" name="particularID" value="" > </td>
-                        <td> </td>
-                        <td>  </td>
-                        <td>  </td>
-                        <td> <button type="button" class="btn btn-danger" style="margin-left:30px"> <i class="fa fa-close"> </i> </button> </tr>
-                      
-                    </tr>
-                    </form>
-                  </tbody>
-                </table>
+
+              <div class="col-sm-4">
+                <div class="card">
+                  <div class="card-block">
+                    <div class="col">
+                      <div class="row">
+                        <div class="col-sm-2">
+                          Date
+                        </div>
+                        <div class="col-sm-2">
+                          <h6> 
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
+
             </div>
-
-          </div>
-
-          </div>
           </div>
         </div>
       </div>
-    </div>
     <!-- CONTENT -->
 
     <!-- JQUERY -->
