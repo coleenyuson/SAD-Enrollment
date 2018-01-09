@@ -4,7 +4,7 @@ html{
 h1{
 	font-size: 29px;
 }
-h2{
+h2, .student-count{
 	font-size: 24px;
 }
 h3{
@@ -189,9 +189,6 @@ nav .active-menu{
 	padding-left: 15px;
 	margin-top: 30px;
 }
-.search-bar{
-
-}
 .active-status{
 	margin-right: 3px;
     font-size: 10px;
@@ -256,4 +253,12 @@ nav .active-menu{
 }
 .pagination{
 	justify-content: center;
+}
+
+/* SECTION LIST */
+.card-shadow{
+	box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3);
+}
+.card{
+	margin-top: 20px;
 }
