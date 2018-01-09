@@ -99,8 +99,10 @@
                       </div>
                     </div>
 
+                    <div style="margin: 10px 10px 10px 10px"> </div>
+
                     <div class="row">
-                        <label class="control-label col-sm-4" for="title"> Due of Payment:</label>
+                        <label class="control-label col-sm-4" for="title"> Birth Date:</label>
                         <div class="col-sm-8">
                         <input class="form-control" type="date" value="2018-01-01" id="due-payment">
                         </div>
@@ -113,62 +115,137 @@
               <div style="margin: 10px 10px 10px 10px"> </div>
 
               <div class="row">
-                  <!-- Emp Username -->
-                  <label class="control-label col-sm-2" for="empUN">Username:</label>
+                <label class="control-label col-sm-2" for="homeAddr">Home Address:</label>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="empUN" name="empUN" placeholder="Enter Username" value="">
+                    <textarea class="form-control" rows="5"id="homeAddr" name="homeAddr" placeholder="Enter Home Address" value=""></textarea>
                   </div>
-                
-                  <!-- Emp Password -->
-                  <label class="control-label col-sm-2" for="empPD">Password:</label>
+                 <label class="control-label col-sm-2" for="postalAddr">Postal Address:</label>
+                <div class="col-sm-4">
+                  <textarea class="form-control" rows="5"id="postalAddr" name="postalAddr" placeholder="Enter Postal Address" value=""></textarea>
+                </div>
+              </div>
+
+
+                <hr>
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <h3 style="margin-bottom: 20px"> Parents' Details </h3>
+                </div>
+              </div>
+
+              <div class="row">
+                  <label class="control-label col-sm-2" for="motherFN">Mother's First Name:</label>
                   <div class="col-sm-4">
-                    <input type="text" class="form-control" id="empPD" name="empPD" placeholder="Enter Password" value="">
+                    <input type="text" class="form-control" id="motherFN" name="motherFN" placeholder="Enter First Name" value="">
+                  </div>
+
+                  <label class="control-label col-sm-2" for="fatherFN">Father's First Name:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="fatherFN" name="fatherFN" placeholder="Enter First Name" value="">
+                  </div>
+              </div>
+
+              <div style="margin: 10px 10px 10px 10px"> </div>
+
+               <div class="row">
+                  <label class="control-label col-sm-2" for="motherMN">Mother's Middle Name:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="motherMN" name="motherMN" placeholder="Enter Middle Name" value="">
+                  </div>
+
+                  <label class="control-label col-sm-2" for="fatherMN">Father's Middle Name:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="fatherMN" name="fatherMN" placeholder="Enter Middle Name" value="">
                   </div>
               </div>
 
               <div style="margin: 10px 10px 10px 10px"> </div>
 
               <div class="row">
-                  <div class="col-md-2">
-                    <label>Employee Type:</label><br/>
-                  </div>
-                  <div class="col-md-4">
-                    <select class="custom-select btn-block" required>
-                      <option selected>Choose a type..</option>
-                      <option value="0">Teacher</option>
-                      <option value="1">Academic Head</option>
-                      <option value="2">Registrar Head</option>
-                      <option value="3">Cashier</option>
-                      <option value="4">Admin</option>
-                      <!-- Values should be from the curriculum years stored in database (ps. idk if this is curriculum ng subjects nila OR curriculum year as in school year-->
-                    </select>
+                  <label class="control-label col-sm-2" for="motherLN">Mother's Last Name:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="motherLN" name="motherLN" placeholder="Enter Last Name" value="">
                   </div>
 
-                  <div class="col-md-2">
-                    <label>Employee Status:</label>
+                  <label class="control-label col-sm-2" for="fatherLN">Father's Last Name:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="fatherLN" name="fatherLN" placeholder="Enter Last Name" value="">
                   </div>
-                  <div class="col-md-2">
-                    <label class="custom-control custom-radio">
-                      <input id="radioActiveScholarship" name="radio-stacked" type="radio" class="custom-control-input">
-                      <span class="custom-control-indicator"></span>
-                      <span class="custom-control-description">Active</span>
-                    </label>
+              </div>
+
+              <div style="margin: 10px 10px 10px 10px"> </div>
+
+              <div class="row">
+                  <label class="control-label col-sm-2" for="motherOcc">Mother's Last Name:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="motherOcc" name="motherOcc" placeholder="Enter Mother's Occupation" value="">
                   </div>
-                  <div class="col-md-2">
-                    <label class="custom-control custom-radio">
-                      <input id="radioInactiveScholarship" name="radio-stacked" type="radio" class="custom-control-input">
-                      <span class="custom-control-indicator"></span>
-                      <span class="custom-control-description">Inactive</span>
-                    </label>
+
+                  <label class="control-label col-sm-2" for="fatherOcc">Father's Occupation:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="fatherOcc" name="fatherOcc" placeholder="Enter Father's Occupation" value="">
                   </div>
+              </div>
+
+              <div style="margin: 10px 10px 10px 10px"> </div>
+
+              <div class="row">
+                  <label class="control-label col-sm-2" for="motherContactNum">Mother's Contact Number:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="motherContactNum" name="motherContactNum" placeholder="Enter Mother's Occupation" value="">
+                  </div>
+
+                  <label class="control-label col-sm-2" for="fatherContactNum">Father's Occupation:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="fatherContactNum" name="fatherContactNum" placeholder="Enter Father's Contact Number" value="">
+                  </div>
+              </div>
+
+                
+
+              <hr>
+
+              <div class="row">
+                <div class="col-sm-12">
+                  <h3 style="margin-bottom: 20px"> Other Details </h3>
                 </div>
+              </div>
 
-                <hr>
+              <div class="row">
+                <div class="col-md-2">
+                  <label>School Year:</label>
+                </div>
+                <div class="col-md-4">
+                  <select class="custom-select btn-block" required>
+                    <option selected>Choose last school attended...</option>
+                    <option value="1">None</option>
+                    <option value="2">Ateneo de Davao University</option>
+                    <option value="3">Davao City National High School</option>
+                    <!-- Values should be from the database -->
+                  </select>
+                </div>
+              </div>
 
-                <div class="row">
+              <div style="margin: 10px 10px 10px 10px"> </div>
+
+              <div class="row">
+                  <label class="control-label col-sm-2" for="guardianName">Guardian's Name:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="guardianName" name="guardianName" placeholder="Enter Guardian's Name" value="">
+                  </div>
+                  <label class="control-label col-sm-2" for="guardianContactNum">Guardian's Contact Number:</label>
+                  <div class="col-sm-4">
+                    <input type="text" class="form-control" id="guardianContactNum" name="guardianContactNum" placeholder="Enter Guardian's Occupation" value="">
+                  </div>
+              </div>
+
+              <hr>
+
+              <div class="row">
                   <div class="col-md-12">
                     <div class="float-right">
-                        <input type="submit" class="btn btn-primary" value="Save Employee Profile"></input> 
+                        <input type="submit" class="btn btn-primary" value="Save Student Profile"></input> 
                     </div>
                   </div>
                 </div>
