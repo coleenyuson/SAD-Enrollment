@@ -251,7 +251,6 @@ nav .active-menu{
 .date-padding-reset{
 	padding-left: 0 !important;
 }
-<<<<<<< HEAD
 
 /* promissory form template*/
 .container .form-padding {
@@ -301,7 +300,8 @@ nav .active-menu{
 .padding-btn {
 	padding-left: 50px;
 	padding-right: 50px;
-=======
+}
+
 .pagination{
 	justify-content: center;
 }
@@ -312,5 +312,4 @@ nav .active-menu{
 }
 .card{
 	margin-top: 20px;
->>>>>>> ce67af7a0969720121d3a6b0790c4c184a810eb6
 }
