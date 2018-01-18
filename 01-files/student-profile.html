@@ -6,12 +6,13 @@
       <!-- globals -->
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+       
       <!-- css files -->
       <link href="01-css/bootstrap.css" rel="stylesheet" type="text/css" />
       <link href="01-css/bootstrap.min.css" rel="stylesheet" type="text/css" />
       <link href="01-css/normalize.css" rel="stylesheet" type="text/css" />
       <link href="01-css/styles.css" rel="stylesheet" type="text/css" />
+      <link href="01-css/gijgo.min.css" rel="stylesheet" type="text/css" />
 
       <!-- icons -->
       <link rel="stylesheet" href="04-fonts/simple-line-icons-master/css/simple-line-icons.css">
@@ -137,9 +138,10 @@
                               </div>
                               <div class="col-md-6">
                                 <label for="enrollment-date">Date Enrolled:</label>
-                                <div class="col-10 date-padding-reset">
-                                  <input class="form-control" type="date" value="2018-01-01" id="enrollment-date">
-                                </div>
+                                    <div class="col-10 date-padding-reset">
+                                      <input id="datepicker" width="276" />
+                                      <!--<input class="form-control" type="date" value="2018-01-01" id="enrollment-date">-->
+                                    </div>
                               </div>
                             </div>
                             <div class="row">
@@ -269,15 +271,21 @@
           </div>
         </div>
       </div>
-      
     </div>
     <!-- CONTENT -->
+
+    <script>
+        $('#datepicker').datepicker({
+            uiLibrary: 'bootstrap4'
+        });
+    </script>
 
     <!-- Bootstrap CDN in case something glitches -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 
     <script src="02-javascript/bootstrap.bundle.js"></script>
+    <script src="02-javascript/gijgo.min.js"></script>
     <script src="02-javascript/bootstrap.js"></script>
     <script src="02-javascript/bootstrap.min.js"></script>
   </body>
