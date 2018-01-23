@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <title>Fees and Accounts List</title>
+      <title>Promissory Note Request List</title>
 
       <!-- globals -->
       <meta charset="utf-8">
@@ -49,7 +49,7 @@
     <!-- CONTENT -->
     <div class="container-fluid bg-content">
       <div class="content">
-        <h2> Fees and Accounts List </h2>
+        <h2> Promissory Note Request List </h2>
         <div class="row search-bar">
           <div class="col-lg-6">
             <div class="input-group">
@@ -71,12 +71,12 @@
             </div>
           </div>
           <div class="col-lg-6">
-            <button type="button" class="add-button btn btn-primary float-right" data-toggle="modal" data-target="#createScholarship">Create a Particular</button>
+            <button type="button" class="add-button btn btn-primary float-right" data-toggle="modal" data-target="#createScholarship">Create a Request</button>
               <div class="modal fade" id="createScholarship" tabindex="-1" role="dialog" aria-labelledby="#createScholarship" aria-hidden="true">
                     <div class="modal-dialog modal-lg" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h3 class="modal-title" id="labelModal">Create a Particular</h3>
+                          <h3 class="modal-title" id="labelModal">Create a Promissory Note Request</h3>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
@@ -84,32 +84,51 @@
                         <div class="modal-body">
                           <form>
                             <div class="row">
-                              <div class="col-md-4">
-                                <label>Year Level:</label>
-                                <select class="custom-select btn-block" required>
-                                  <option selected>Choose a year level..</option>
-                                  <option value="1">Kindergarten 1</option>
-                                  <option value="2">Kindergarten 2</option>
-                                  <option value="3">Grade School 1</option>
-                                  <option value="3">Grade School 2</option>
-                                  <!-- Values should be from the database SchoolYearID -->
-                                </select>
+                              <div class="col-md-6">
+                                <label>Student Name:</label>
+                                <input type="text" class="form-control" id="studentName"placeholder="Enter Student Name"> </input>
                               </div>
                             </div>
                             <div class="row">
-                              <div class="col-md-6">
-                                <label>Particular Name:</label>
-                                <input type="text" class="form-control" id="particularName">
+                              <div class="col-md-4">
+                                <label>Student ID:</label>
+                                <p class="form-control-static">  xxxxx </p>
                               </div>
-                              <div class="col-md-6">
-                                <label>Fee Amount:</label>
-                                <input type="number" class="form-control" id="feeAmount">
+                              <div class="col-md-4">
+                                <label>Grade Level:</label> 
+                                 <p class="form-control-static"> Grade xx </p>
+                              </div>
+                              <div class="col-md-4">
+                                <label>School Year:</label>
+                                <p class="form-control-static">2017-2018</p><!--incremental-->
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4">
+                                <label> Title: </label>
+                                <input type="text" class="form-control" id="titleRequest" placeholder="Enter Title of Request"> </input> 
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-8">
+                                <label> Reason: </label>
+                                <textarea class="form-control" name="reason" rows="5"  placeholder="Enter your reason of request here." style="margin-top:5px"> </textarea>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4">
+                                <label> Amount: </label>
+                                <input type="number" class="form-control" id="amountRequest" placeholder="0.00"> </input> 
+                              </div>
+                              <div class="col-md-4">
+                                <label> Due of Payment: </label>
+                                <input type="date" class="form-control" id="paymentDue" placeholder="mm-dd-yyyy"></input>
                               </div>
                             </div>
                           </form>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
-                          <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#confirmModal">Save particular details</button>
+                          <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#confirmModal">Create Request</button>
                           <div class="modal" id="confirmModal" tabindex="-1" role="dialog">
                               <div class="modal-dialog" role="document">
                                   <div class="modal-content">
@@ -144,23 +163,65 @@
             <thead class="thead-light">
               <tr>
                 <!-- Refer to database for headings -->
-                <th scope="col">Particular Name</th>
-                <th scope="col">Fee Amount</th>
-                <th scope="col">Year Level</th>
+                <th scope="col">School Year</th>
+                <th scope="col">Student ID</th>
+                <th scope="col">Student Name</th>
+                <th scope="col">Grade Level</th>
+                <th scope="col">Date Requested</th>
+                <th scope="col">Date of Due Payment</th>
+                <th scope="col">Status</th>
                 <th scope="col">Actions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td> Enrollment Fee </td>
-                <td> 5,000 </td>
-                <td> Grade 12 </td>
+                <td> 2017-2018 </td>
+                <td> 0001 </td>
+                <td> Brown, Millie-Bobbie </td>
+                <td> Grade 10 </td>
+                <td> October 18, 2017 </td>
+                <td> November 18, 2017 </td>
+                <td> Approved </td>
                 <td class="text-center"><a href="#" class="btn btn-secondary btn-sm view-button">Edit</a></td>
               </tr>
               <tr>
-               <td> Enrollment Fee </td>
-                <td> 4,500 </td>
-                <td> Grade 11 </td>
+                <td> 2017-2018 </td>
+                <td> 0001 </td>
+                <td> Brown, Millie-Bobbie </td>
+                <td> Grade 10 </td>
+                <td> November 24, 2017 </td>
+                <td> December 14, 2017 </td>
+                <td> Approved </td>
+                <td class="text-center"><a href="#" class="btn btn-secondary btn-sm view-button">Edit</a></td>
+              </tr>
+              <tr>
+                <td> 2017-2018 </td>
+                <td> 0004 </td>
+                <td> Heaton, Charlie </td>
+                <td> Grade 1 </td>
+                <td> January 5, 2017 </td>
+                <td> February 5, 2017 </td>
+                <td> Pending </td>
+                <td class="text-center"><a href="#" class="btn btn-secondary btn-sm view-button">Edit</a></td>
+              </tr>
+              <tr>
+                <td> 2017-2018 </td>
+                <td> 0002 </td>
+                <td> Dyer, Natalia </td>
+                <td> Grade 6 </td>
+                <td> January 10, 2017 </td>
+                <td> February 8, 2017 </td>
+                <td> Pending </td>
+                <td class="text-center"><a href="#" class="btn btn-secondary btn-sm view-button">Edit</a></td>
+              </tr>
+              <tr>
+                <td> 2017-2018 </td>
+                <td> 0007 </td>
+                <td> MclAughlin, Caleb </td>
+                <td> Grade 3 </td>
+                <td> January 23, 2017 </td>
+                <td> February 20, 2017 </td>
+                <td> Pending </td>
                 <td class="text-center"><a href="#" class="btn btn-secondary btn-sm view-button">Edit</a></td>
               </tr>
             </tbody>

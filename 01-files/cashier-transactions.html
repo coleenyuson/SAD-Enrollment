@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <title>Student Accounts</title>
+      <title>Transactions</title>
 
       <!-- globals -->
       <meta charset="utf-8">
@@ -274,31 +274,55 @@
                                         </div>
                                         <div class="row">
                                           <div class="col-md-4">
-                                            <label>Enrollment ID:</label>
-                                            <p class="form-control-static">0003</p><!--incremental-->
-                                          </div>
-                                          <div class="col-md-4">
-                                            <label>Student Type:</label>
-                                            <p class="form-control-static">Grade School</p><!--incremental-->
+                                            <label>Grade Level:</label>
+                                            <p class="form-control-static">Grade 12</p><!--incremental-->
                                           </div>
                                         </div>
                                        
                                           <ul class="nav nav-tabs card-header-tabs">
                                             <li class="nav-item">
-                                              <a class="nav-link active">Cash</a>
+                                              <a data-toggle="tab" href="#cash" class="active nav-link">Cash</a>
                                             </li>
                                             <li class="nav-item">
-                                              <a class="nav-link" href="#">Card</a>
+                                              <a data-toggle="tab" href="#credit" class="nav-link">Card</a>
                                             </li>
                                             <li class="nav-item">
-                                              <a class="nav-link" data-target="#promNote">Promissory Note</a>
+                                              <a data-toggle="tab" href="#promissory" class="nav-link">Promissory Note</a>
                                             </li>
                                           </ul>
 
-                                          <div id="promNote">
-                                          <div class="embed-responsive embed-responsive-21by9">
-                                            <iframe class="embed-responsive-item" src="admin-form-promissory.html"></iframe>
-                                          </div>
+                                            <div class="tab-content">
+                                              <div id="cash" class="tab-pane fade in active">
+                                                <div class="container-fluid">
+                                                  <form>
+                                                    <div class="row">
+                                                      <div class="col-md-6">
+                                                        <label>Fee Amount:</label>
+                                                        <input type="number" class="form-control">
+                                                      </div>
+                                                    </div>
+                                                    <div class="row">
+                                                      <div class="col-sm-2">
+                                                        <label> Change: </label>
+                                                      </div>
+                                                      <div class="col-sm-4">
+                                                        <p class="form-control-static"> 0.00 </p>
+                                                      </div>
+                                                    </div>
+                                                  </form>
+                                                </div>
+                                              </div>
+
+                                              <div id="credit" class="tab-pane fade">
+                                                <h3>Menu 1</h3>
+                                                <p>Some content in menu 1.</p>
+                                              </div>
+
+                                              <div id="promissory" class="tab-pane fade">
+                                                <h3>Menu 2</h3>
+                                                <p>Some content in menu 2.</p>
+                                              </div>
+                                            </div>
 
                                       </form>
 
