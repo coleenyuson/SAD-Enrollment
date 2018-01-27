@@ -53,7 +53,7 @@
         <div class="row search-bar">
           <div class="col-lg-6"></div>
           <div class="col-lg-6">
-            <button type="button" class="add-button btn btn-primary float-right" data-toggle="modal" data-target="#createNewSchoolYear">Add School Year Details</button>
+            <button type="button" class="add-button btn btn-primary float-right" data-toggle="modal" data-target="#createNewSchoolYear"><i class="fa fa-plus" aria-hidden="true"></i> Add School Year Details</button>
               <div class="modal fade" id="createNewSchoolYear" tabindex="-1" role="dialog" aria-labelledby="#createNewSchoolYear" aria-hidden="true">
                     <div class="modal-dialog modal-lg" role="document">
                       <div class="modal-content">
@@ -132,16 +132,22 @@
                 <!-- Refer to database for headings -->
                 <th scope="col">School Year ID <i class="fa fa-sort" aria-hidden="true"></th>
                 <th scope="col">School Year Name <i class="fa fa-sort" aria-hidden="true"></th>
-                <th scope="col">Date Start - Date End <i class="fa fa-sort" aria-hidden="true"></th>
+                <th scope="col">Date Start - Date End </th>
                 <th scope="col">Actions</th>
               </tr>
             </thead>
-            <tbody>
+            <tbody><!--Please arrange with most recent first (descending)-->
               <tr>
                 <td>0001</td>
                 <td>SY. 2017 - 2018</td>
                 <td>June 8, 2017 - March 21, 2018</td>
-                <td class="text-center"><a href="#" class="btn btn-secondary btn-sm view-button">Edit</a></td>
+                <td class="text-center"><a href="subject-offering.html" class="btn btn-success btn-sm view-button btn-long-text ">View Offerings</a><br><a href="#" class="btn btn-secondary btn-sm btn-long-text view-button">Edit School Year</a></td>
+              </tr>
+              <tr>
+                <td>0002</td>
+                <td>SY. 2016 - 2017</td>
+                <td>June 8, 2016 - March 21, 2017</td>
+                <td class="text-center"><a href="subject-offering.html" class="btn btn-success btn-sm view-button btn-long-text ">View Offerings</a><br><a href="#" class="btn btn-secondary btn-sm btn-long-text view-button">Edit School Year</a></td>
               </tr>
             </tbody>
           </table>

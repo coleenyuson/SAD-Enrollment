@@ -16,7 +16,7 @@ h4{
 h5, p{
 	font-size: 14px;
 }
-button{
+button, a{
 	border:0;
 	cursor: pointer;
 }
@@ -208,7 +208,7 @@ nav .active-menu{
 .view-button{
 	width: 100px !important;
 }
-.modal-body label{
+.modal-body label, .heading-label label{
 	font-weight: bold;
 	color: #7A869A;
 	margin-top: 10px;
@@ -231,6 +231,9 @@ nav .active-menu{
 /* SETTINGS */
 .grey{
 	color: #777777;
+}
+.row-menu{
+	margin-bottom: 20px;
 }
 .margin{
 	margin-bottom: 30px;
@@ -261,4 +264,21 @@ nav .active-menu{
 }
 .card{
 	margin-top: 20px;
+}
+
+/* SCHOOL YEAR LIST */
+.btn-long-text{
+	white-space:normal !important;
+    max-width:200px;
+    word-wrap:break-word;
+}
+
+/* USERS LIST ADD */
+.btn-forms{
+	margin: 20px;
+}
+.reset-password-btn{
+	font-weight: bold;
+	color: #007bff !important;
+	margin-left: 10px;
 }
