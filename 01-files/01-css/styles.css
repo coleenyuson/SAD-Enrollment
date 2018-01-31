@@ -272,6 +272,15 @@ nav .active-menu{
     max-width:200px;
     word-wrap:break-word;
 }
+.text-center{
+	text-align:center;
+}
+.text-right{
+	text-align: right;
+}
+.text-left{
+	text-align: left;
+}
 
 /* USERS LIST ADD */
 .btn-forms{
