@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <title>System Users</title>
+      <title>Student Profile</title>
 
       <!-- globals -->
       <meta charset="utf-8">
@@ -72,15 +72,6 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-md-10">
-                <label>Student Profile Picture:</label><br>
-                <label class="custom-file profile-picture">
-                <input type="file" id="file" class="custom-file-input">
-                <span class="custom-file-control"></span>
-                </label>
-              </div>
-            </div>
-            <div class="row">
               <div class="col-md-4">
                 <label>First name:</label>
                   <input type="text" class="form-control" required>
@@ -102,9 +93,7 @@
               </div>
               <div class="col-md-4">
                 <label>Date of Birth:</label><br/>
-                <div class="col-10">
                 <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
-              </div>
               </div>
               <div class="col-md-2">
                 <label>Sex:</label><br/>
@@ -182,7 +171,7 @@
               </div>
             </div>
             <div class="row">
-              <button type="button" onclick="add()" class="btn btn-link"><i class="fa fa-plus" aria-hidden="true"></i> Add another sibling</button>
+              <button type="button" id="sibs" onclick="add()" class="btn btn-link"><i class="fa fa-plus" aria-hidden="true"></i> Add another sibling</button>
             </div>
             <div class="row">
               <div class="col-md-6">
@@ -207,7 +196,7 @@
         </form>
       </div>
     </div>
-    
+
     <!-- Bootstrap CDN in case something glitches -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
@@ -217,7 +206,29 @@
     <script src="02-javascript/bootstrap.min.js"></script>
 
     <script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();   
-    });
+      var count=1;
+      var add = function(){
+        if(count >= 5) return;
+
+        $('#addSibs').append('<div class="col-md-6"> <label>Sibling\'s Name</label><input type="text" class="form-control" placeholder="Last name, First name"></div><div class="col-md-6"><label>Year Graduated</label><input type="text" class="form-control" required></div>')
+
+        count++;
+
+        if(count >= 5) { $("#sibs").remove(); }
+      };
     </script>
+
+    <!-- Bootstrap CDN in case something glitches -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+    <script src="02-javascript/bootstrap.bundle.js"></script>
+    <script src="02-javascript/bootstrap.js"></script>
+    <script src="02-javascript/bootstrap.min.js"></script>
+
+    <!-- JQUERY -->
+    <script src="02-javascript/jquery-3.2.1.min.js"></script>
+
+
+  </body>
+</html>

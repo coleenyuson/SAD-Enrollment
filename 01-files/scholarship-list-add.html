@@ -68,26 +68,11 @@
                   <input type="text" class="form-control">
                 </div>
                 <div class="col-md-6">
-                  <label>Scholarship Amount:</label>
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">₱ </span>
-                    </div>
-                    <input type="number" class="form-control" aria-label="Scholarship Amount in pesos)">
-                  </div>
+                  <label>Scholarship Reductions:</label>
+                  <input type="text" id="reductions" class="form-control" aria-label="Scholarship Amount in pesos)"><!--Used text to allow commas-->
                 </div>
               </div>
               <div class="row">
-                <div class="col-md-4">
-                  <label>School Year:</label>
-                  <select class="custom-select btn-block" required>
-                    <option selected>Choose a school year..</option>
-                    <option value="1">2015-2016</option>
-                    <option value="2">2016-2017</option>
-                    <option value="3">2017-2018</option>
-                    <!-- Values should be from the database SchoolYearID -->
-                  </select>
-                </div>
                 <div class="col-md-4">
                   <label>Scholarship Type:</label>
                   <select class="custom-select btn-block" required>
@@ -99,19 +84,14 @@
                   </select>
                 </div>
                 <div class="col-md-4">
-                  <label>Scholarship Validity:</label>
-                  <div class="custom-controls-stacked">
-                    <label class="custom-control custom-radio">
-                      <input id="radioActiveScholarship" name="radio-stacked" type="radio" class="custom-control-input">
-                      <span class="custom-control-indicator"></span>
-                      <span class="custom-control-description">Valid</span>
-                    </label>
-                    <label class="custom-control custom-radio">
-                      <input id="radioInactiveScholarship" name="radio-stacked" type="radio" class="custom-control-input">
-                      <span class="custom-control-indicator"></span>
-                      <span class="custom-control-description">Invalid</span>
-                    </label>
-                  </div>
+                  <label>Valid for:</label>
+                  <select class="custom-select btn-block" required>
+                    <option selected>Choose a school year..</option>
+                    <option value="1">SY 2017-2018</option>
+                    <option value="2">SY 2016-2017</option>
+                    <option value="3">SY 2015-2016</option>
+                    <option value="4">Others</option>
+                  </select>
                 </div>
               </form>
             </div>
@@ -132,7 +112,19 @@
     <script src="02-javascript/bootstrap.min.js"></script>
 
     <script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();   
-    });
+    /*$(document).ready(function(){
+        $("#reductions").keyup(function(event){
+          // skip for arrow keys
+          if(event.which >= 37 && event.which <= 40){
+              event.preventDefault();
+          }
+          var $this = $(this);
+          var num = $this.val().replace(/,/gi, "");
+          var num2 = num.split(/(?=(?:\d{3})+$)/).join(",");
+          console.log(num2);
+          // the following line has been simplified. Revision history contains original.
+          $this.val(num2);
+      });
+    });*/
+    // does not support decimals
     </script>
