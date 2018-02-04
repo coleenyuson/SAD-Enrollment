@@ -16,7 +16,7 @@ h4{
 h5, p{
 	font-size: 14px;
 }
-button{
+button, a{
 	border:0;
 	cursor: pointer;
 }
@@ -27,9 +27,17 @@ nav .active-menu{
 	padding-bottom: 10px !important;
 }
 /* index.html */
-.container {
+.container{
+	display: flex;
+  	flex-flow: row wrap;
+  	-webkit-justify-content: center;
+          justify-content: center;
+    padding-bottom: 20px;
+    padding-top: 50px;
+}
+.form-container {
   background-color: #FFFFFF;
-  padding-top: 50px;
+  padding-top: 20px !important;
   display: flex;
   flex-flow: row wrap;
   -webkit-justify-content: center;
@@ -208,7 +216,7 @@ nav .active-menu{
 .view-button{
 	width: 100px !important;
 }
-.modal-body label{
+.modal-body label, .heading-label label{
 	font-weight: bold;
 	color: #7A869A;
 	margin-top: 10px;
@@ -231,6 +239,9 @@ nav .active-menu{
 /* SETTINGS */
 .grey{
 	color: #777777;
+}
+.row-menu{
+	margin-bottom: 20px;
 }
 .margin{
 	margin-bottom: 30px;
@@ -312,4 +323,39 @@ nav .active-menu{
 }
 .card{
 	margin-top: 20px;
+}
+
+/* SCHOOL YEAR LIST */
+.btn-long-text{
+	white-space:normal !important;
+    max-width:200px;
+    word-wrap:break-word;
+}
+.text-center{
+	text-align:center;
+}
+.text-right{
+	text-align: right;
+}
+.text-left{
+	text-align: left;
+}
+
+/* USERS LIST ADD */
+.btn-forms{
+	margin: 20px;
+}
+.reset-password-btn{
+	font-weight: bold;
+	color: #007bff !important;
+	margin-left: 10px;
+}
+
+/* CURRICULUM LIST ADD */
+.delete-btn{
+	font-size:2em; 
+	margin-top: 30px
+}
+.warning{
+	color:#DE350A;
 }

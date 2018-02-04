@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <title>Subject Offering</title> <!-- change title to user's full name -->
+      <title>Curriculum Details</title>
 
       <!-- globals -->
       <meta charset="utf-8">
@@ -49,97 +49,45 @@
     <!-- CONTENT -->
     <div class="container-fluid bg-content">
       <div class="content"> 
-        <a href="schoolyear-list.html"><h4><i class="fa fa-angle-left" aria-hidden="true"></i> Back to records list</h4></a>
+        <a href="curriculum-list.html"><h4><i class="fa fa-angle-left" aria-hidden="true"></i> Back to records list</h4></a>
         <div class="card">
           <div class="card-block">
             <div class="row records">
               <div class="col-md-8">
-                <h2>Subject Offering</h2>
+                <h2>Curriculum Details</h2>
               </div>
               <div class="col-md-4">
                 <div class="float-right">
-                  <button type="button" class="add-button btn btn-primary float-right" data-toggle="modal" data-target="#createSubjectOfferingModal"><i class="fa fa-plus" aria-hidden="true"></i>Create Subject Offering</button>
+                  <button type="button" class="add-button btn btn-primary float-right" data-toggle="modal" data-target="#createSubjectOfferingModal"><i class="fa fa-plus" aria-hidden="true"></i> Add Subject to Curriculum</button>
               <div class="modal fade" id="createSubjectOfferingModal" tabindex="-1" role="dialog" aria-labelledby="#createStudentOfferingModal" aria-hidden="true">
                     <div class="modal-dialog modal-lg" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
-                          <h3 class="modal-title" id="labelModal">Create Subject Offering</h3>
+                          <h3 class="modal-title" id="labelModal">Add Subject to Curriculum</h3>
                           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                           </button>
                         </div>
                         <div class="modal-body">
                           <form>
-                            <div class="row">
+                            <div class="row" id="addSubjects">
                               <div class="col-md-4">
-                              <label>Offering ID:</label>
-                                <p class="form-control-static">0003</p><!--incremental-->
+                                <label>Subject ID:</label>
+                                <p class="form-control-static">0001</p>
                               </div>
-                              <div class="col-md-4">
-                              <label>Curriculum Year:</label>
-                                <p class="form-control-static">2017</p><!--incremental-->
-                              </div>
-                            </div>
-                            <h5 class="sm-headings">Subject Details </h5>
-                            <div class="row">
                               <div class="col-md-6">
                                 <label>Subject Name:</label>
-                                <select class="custom-select btn-block" required>
-                                  <option selected>Choose subject name...</option>
-                                  <option value="1">Jedi Training</option>
-                                  <option value="2">Dark Side of The Force</option>
-                                </select>
-                                <!-- Database values of Subjects -->
-                              </div>
-                              <div class="col-md-6">
-                                <label>Teacher Assigned:</label>
-                                <select class="custom-select btn-block" required>
-                                  <option selected>Choose teacher...</option>
-                                  <option value="1">Kenobi, Obi-wan</option>
-                                  <option value="2">Skywalker, Anakin</option>
-                                  <option value="3">Yoda</option>
-                                </select>
-                                <!-- Database values for Teacher ID in Table Offering-->
+                                  <input type="text" class="form-control" required>
                               </div>
                             </div>
                             <div class="row">
-                              <div class="col-md-6">
-                                <label>School Year:</label>
-                                <select class="custom-select btn-block" required>
-                                  <option selected value="1">2017-2018</option>
-                                  <option value="2">2016-2017</option>
-                                  <option value="3">2015-2016</option>
-                                  <!-- Values should be from the database SchoolYearID but set na sya dapat sa CURRENT school year. -->
-                                </select>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col-md-4">
-                                <label>Year Level:</label>
-                                <select class="custom-select btn-block" required>
-                                  <option selected>Choose a school year..</option>
-                                  <option value="1">Grade I</option>
-                                  <option value="2">Grade II</option>
-                                  <option value="3">Grade III</option>
-                                  <!-- Values will not be stored, we will use this to query what sections will display on the next dropdown. (Eg. If Grade VI, there are 2 sections that will display in the next dropdown: St. Michael and St. Therese. Hypothetical sections only.) -->
-                                </select>
-                              </div>
-                              <div class="col-md-4">
-                                <label>Section Assigned:</label>
-                                <select class="custom-select btn-block" required>
-                                  <option selected>Choose a section..</option>
-                                  <option value="1">St. Nicholas</option>
-                                  <option value="2">St. Gabriel</option>
-                                  <option value="3">St. Oh hai Mark</option>
-                                  <!-- Values should be from the sectionID -->
-                                </select>
-                              </div>
+                              <button type="button" onclick="add()" class="btn btn-link"><i class="fa fa-plus" aria-hidden="true"></i> Add additional subject</button>
                             </div>
                           </form>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-link" data-dismiss="modal">Cancel</button>
-                          <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#confirmModal">Save Subject Details</button>
+                          <button type="button" class="btn btn-primary"  data-toggle="modal" data-target="#confirmModal">Save Subjects</button>
                           <div class="modal" id="confirmModal" tabindex="-1" role="dialog">
                               <div class="modal-dialog" role="document">
                                   <div class="modal-content">
@@ -171,33 +119,21 @@
                 <thead class="thead-light">
                   <tr>
                     <!-- Refer to database for headings -->
-                    <th scope="col">Offering ID </th>
+                    <th scope="col">Subject ID</th>
                     <th scope="col">Subject Name</th>
-                    <th scope="col">Teacher Assigned</th>
-                    <th scope="col">Schedule</th>
-                    <th scope="col">Units</th>
-                    <th scope="col">Section Assigned</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col">Subject Status</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>0001</td>
-                    <td>The Force 101</td>
-                    <td>Skywalker, Luke</td>
-                    <td>9:30 AM - 10:30 AM</td>
-                    <td>3/3</td>
-                    <td>St. Oh hai Mark</td>
-                    <td class="text-center"><a href="#" class="btn btn-success btn-sm view-button">View</a><a href="#" class="btn btn-secondary btn-sm view-button">Edit</a></td>
+                    <td>Mathematics IV</td>
+                    <td class="text-center"><a href="#" class="btn btn-secondary btn-sm view-button">Edit</a></td>
                   </tr>
                   <tr>
                     <td>0002</td>
-                    <td>Jedi Training</td>
-                    <td>Kenobi, Obi-Wan</td>
-                    <td>11:30 AM - 12:30 AM</td>
-                    <td>3/3</td>
-                    <td>St. Gabriel</td>
-                    <td class="text-center"><a href="#" class="btn btn-success btn-sm view-button">View</a><a href="#" class="btn btn-secondary btn-sm view-button">Edit</a></td>
+                    <td>Computer</td>
+                    <td class="text-center"><a href="#" class="btn btn-secondary btn-sm view-button">Edit</a></td>
                   </tr>
                 </tbody>
               </table>
@@ -212,6 +148,15 @@
     <!-- Bootstrap CDN in case something glitches -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+    <script>
+      var count=1;
+      var add = function(){
+        if(count >= 15) return;
+        $('#addSubjects').append('<div class="col-md-4"> <label>Subject ID:</label><p class="form-control-static">0001</p></div><div class="col-md-6"><label>Subject Name:</label><input type="text" class="form-control" required></div>') // Increment SubjectID
+        count++;
+      };
+    </script>
 
     <script src="02-javascript/bootstrap.bundle.js"></script>
     <script src="02-javascript/bootstrap.js"></script>
