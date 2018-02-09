@@ -278,33 +278,15 @@ nav .active-menu{
 }
 
 /* cashier transaction */
-.float-right{
-	float: right;
-}
-
-.input-padding {
-	padding-top: 5px;
-	padding-bottom: 5px;
+.form-spacing {
+	padding-top: 10px;
+	padding-bottom: 10px;
 }
 
 .amount-emphasis {
 	color: red;
 }
 
-.btn-type {
-	padding-right: 50px;
-	padding-left: 50px;
-	margin-right: 50px;
-}
-
-.padding-btn {
-	padding-left: 50px;
-	padding-right: 50px;
-}
-
-.pagination{
-	justify-content: center;
-}
 
 /* SECTION LIST */
 .card-shadow{
