@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <title>Student Profile</title> <!-- change title to user's full name -->
+      <title>Section Details</title>
 
       <!-- globals -->
       <meta charset="utf-8">
@@ -50,84 +50,60 @@
     <!-- CONTENT -->
     <div class="container-fluid bg-content">
       <div class="content"> 
-        <a href="student-registration-list.html"><h4><i class="fa fa-angle-left" aria-hidden="true"></i> Back to records list</h4></a>
+        <a href="section-list.html"><h4><i class="fa fa-angle-left" aria-hidden="true"></i> Back to records list</h4></a>
         <div class="card">
           <div class="card-block">
             <div class="row">
               <div class="col-md-12">
                 <div class="row">
                   <div class="col-md-8">
-                    <h1 class="card-title">Millie-Bobbie Brown</h1>
+                    <h1 class="card-title">St. Mark</h1>
                   </div>
                   <div class="col-md-4 float-right">
                     <br/><!-- bwahaha tricks-->
-                    <a href="#" class="card-link margin"><i class="fa fa-print" aria-hidden="true"></i> Print Student Profile</a>
+                    
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md-4">
-                    <h6 class="card-subtitle mb-2 link">Student ID: <span class="text-muted">0001</span></h6>
-                    <h6 class="card-subtitle link mb-2 ">Student Level:<span class="text-muted">Grade School</span></h6>
-                    <h6 class="card-subtitle mb-2 link">Place of Birth: <span class=" text-muted">Davao City, Philippines</span></h6>
-                    <h6 class="card-subtitle link mb-2 ">Date of Birth: <span class="text-muted">February 19, 2002</span></h6>
-                  </div>
-                  <div class="col-md-4">
-                    <h6 class="card-subtitle link mb-2 ">Sex: <span class="text-muted"> Female</span></h6>
-                    <h6 class="card-subtitle link mb-2 ">Home Address: <span class="text-muted"> 2595 Pearlman Avenue Sudbury, MA</span></h6>
-                    <h6 class="card-subtitle link mb-2 ">Postal Address: <span class="text-muted"> 2595 Pearlman Avenue Sudbury, MA</span></h6>
-                  </div>
-                  <div class="col-md-4">
-                    <h6 class="card-subtitle link mb-2 ">Father's Name: <span class="text-muted"> Han Solo</span></h6>
-                    <h6 class="card-subtitle link mb-2 ">Mother's Name: <span class="text-muted"> Leia Organa</span></h6>
-                    <h6 class="card-subtitle link mb-2 ">Guardian's Name: <span class="text-muted"> Luke Skywalker</span></h6>
+                    <h6 class="card-subtitle mb-2 link">Room: <span class="text-muted"> F612</span></h6>
+                    <h6 class="card-subtitle link mb-2 ">Adviser:<span class="text-muted"> Mr. Obi-Wan Kenobi</span></h6>
+                    <h6 class="card-subtitle mb-2 link">Total Number of Students: <span class=" text-muted">3/45</span></h6>
                   </div>
                 </div>
               </div>
             </div>
             <div class="row records">
               <div class="col-md-8">
-                <h2>Student Registration</h2>
+                <h2>Student List</h2>
               </div>
-              <div class="col-md-4">
+              <div class="col-lg-4">
+                <a href="#" class="card-link margin"><i class="fa fa-print" aria-hidden="true"></i> Print Section Details</a>
                 <div class="btn-group float-right">
-                  <a href="student-profile-add.html" class="add-button btn btn-primary "><i class="fa fa-plus" aria-hidden="true"></i> Create Student Registration</a>
+                  <a href="section-details-add.html" class="add-button btn btn-primary "><i class="fa fa-plus" aria-hidden="true"></i> Add Student</a>
                 </div>
+              </div>
             </div>
             <div class="row table-records table-responsive">
               <table class="table table-bordered bg-nav table-hover">
                 <thead class="thead-light">
                   <tr>
                     <!-- Refer to database for headings -->
-                    <th scope="col">Enrollment ID</th>
-                    <th scope="col">Curriculum Year</th>
-                    <th scope="col">School Year</th>
-                    <th scope="col">Year Level</th>
-                    <th scope="col">Date Enrolled</th>
-                    <th scope="col">Enrollment Status</th>
-                    <th scope="col">Scholarship Status</th>
-                    <th scope="col">Actions</th>
+                    <th scope="col">Student ID <i class="fa fa-sort" aria-hidden="true"></th>
+                    <th scope="col">Last Name <i class="fa fa-sort" aria-hidden="true"></th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Middle Name</th>
+                    <th scope="col">Actions <i class="fa fa-sort" aria-hidden="true"></th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td>0001</td>
-                    <td>2015</td>
-                    <td>2018-2019</td>
-                    <td>Grade 6</td>
-                    <td>01-07-18</td>
-                    <td>Enrolled</td><!-- If paid, tag as enrolled. Else, pending-->
-                    <td><i class="fa fa-circle active-status"></i> Active</td>
-                    <td class="text-center"><a href="#" class="btn btn-success btn-sm view-button">View</a><a href="#" class="btn btn-secondary btn-sm view-button">Edit</a></td>
-                  </tr>
-                  <tr>
-                    <td>0002</td>
-                    <td>2015</td>
-                    <td>2017-2018</td>
-                    <td>Grade 5</td>
-                    <td>01-07-17</td>
-                    <td>Enrolled</td>
-                    <td><i class="fa fa-circle inactive-status"></i> Inactive</td>
-                    <td class="text-center"><a href="#" class="btn btn-success btn-sm view-button">View</a><a href="#" class="btn btn-secondary btn-sm view-button">Edit</a></td>
+                    <td>Da wae</td>
+                    <td>Do you</td>
+                    <td>know</td>
+                    <td class="text-center"><a href="#" class="btn btn-success btn-sm view-button">View</a><!--Makita student profile nila-->
+                    <a href="#" class="btn btn-danger btn-sm view-button">Delete</a></td>
                   </tr>
                 </tbody>
               </table>
@@ -147,4 +123,4 @@
     <script src="02-javascript/bootstrap.js"></script>
     <script src="02-javascript/bootstrap.min.js"></script>
   </body>
-</html>
+  </html>
