@@ -297,6 +297,11 @@ nav .active-menu{
 .amount-emphasis {
 	color: red;
 }
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
 
 
 /* SECTION LIST */
