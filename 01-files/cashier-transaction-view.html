@@ -311,13 +311,27 @@
         var h = today.getHours();
         var m = today.getMinutes();
         var s = today.getSeconds();
+
+        var text = "";
+
         h = checkHour(h);
         m = checkTime(m);
         s = checkTime(s);
-        document.getElementById('currentTime').innerHTML =
-        h + ":" + m + ":" + s;
+        text = getCurrentTime(h);
+         document.getElementById('currentTime').innerHTML = h + ":" + m + ":" + s + text;
         var t = setTimeout(startTime, 500);
       }
+      function getText(h, m, s) {
+        if if (i >= 13 && i <= 24) {
+          //PM
+         return " PM";
+        }
+        else {
+          //AM
+          return " AM";
+        }
+      }
+
       function checkTime(i) {
           if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
           return i;
@@ -361,6 +375,9 @@
               return i = 12;
               break;
           }
+        }
+        else {
+          return i = i;
         }
       }
     </script>
