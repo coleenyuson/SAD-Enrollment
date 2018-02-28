@@ -80,43 +80,9 @@
 
               <div class="col-lg-8">  <!-- left side -->
 
-                <h5 class="sm-headings"> Student Information </h5>
-                <div class= "row">
-                  <div class="col-md-8">
-                    <label>Student Name:</label>
-                    <input type="text" class="form-control" id="studentName">
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm-2">
-                    <label> Student ID: </label>
-                  </div>
-                  <div class="col-sm-2">
-                     <p class="form-control-static">0002</p>
-                  </div>
-                  <div class="col-sm-2">
-                    <label> Grade Level: </label>
-                  </div>
-                  <div class="col-sm-2">
-                    <p class="form-control-static"> Grade 12 </p>
-                  </div>
-                  <div class="col-sm-2">
-                    <label> School Year: </label>
-                  </div>
-                  <div class="col-sm-2">
-                    <p class="form-control-static"> 2018-2019 </p>
-                  </div>
-                </div>
-
-                <div class="form-spacing"> </div>
-
                 <h5 class="sm-headings"> Particulars </h5>
                 <div id="addParticulars">
                   <div class="row">
-                    <div class="col-sm-3">
-                      <label>Particular ID:</label>
-                      <p class="form-control-static">0001</p>
-                    </div>
                     <div class="col-sm-4">
                       <label>Particular Name:</label>
                         <input type="text" class="form-control" required>
@@ -386,7 +352,7 @@
       var count=1;
       var add = function(){
         if(count >= 15) return;
-        $('#addParticulars').append('<div id="addParticulars"><div class="row"><div class="col-sm-3"><label>Particular ID:</label><p class="form-control-static">0001</p></div><div class="col-sm-4"><label>Particular Name:</label><input type="text" class="form-control" required></div><div class="col-sm-3"><label>Amount: </label><p class="form-control-static">0001</p></div><div class="col-sm-2"><label>Qty:</label><input type="number" class="form-control" required></div><div class="col-sm-2 text-center delete-btn"><a href="#" class="delete-row warning" onclick="deleteRow(this)"><i class="fa fa-close"></i> </a></div></div></div>') // Increment SubjectID
+        $('#addParticulars').append('<div id="addParticulars"><div class="row"><div class="col-sm-4"><label>Particular Name:</label><input type="text" class="form-control" required></div><div class="col-sm-3"><label>Amount: </label><p class="form-control-static">00.00</p></div><div class="col-sm-2"><label>Qty:</label><input type="number" class="form-control" required></div><div class="col-sm-2 text-center delete-btn"><a href="#" class="delete-row warning" onclick="deleteRow(this)"><i class="fa fa-close"></i> </a></div></div></div>') // Increment SubjectID
         count++;
       };
     </script>
