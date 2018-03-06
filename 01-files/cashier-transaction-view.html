@@ -52,38 +52,24 @@
 
     <div class="container-fluid bg-content wrapper">
       <div class="content">
+        <a href="cashier-transaction-student.html"><h4><i class="fa fa-angle-left" aria-hidden="true"></i> Back </h4></a>
+        <div class="form-spacing"> </div>
         <div class="form-heading margin">
-          <h3> Transaction </h3>
+          <h2> Transaction </h2>
         </div>
-        
-        <!-- Date and Time -->
-        <div class="row">
-          <div class="col-sm-2">
-            <label> Date: </label>
-          </div>
-          <div class="col-sm-2">
-            <div id="currentDate"> </div>
-          </div>
-          <div class="col-sm-2">
-            <label> Time: </label>
-          </div>
-          <div class="col-sm-2">
-            <div id="currentTime"> </div>
-          </div>
-        </div>
-
+      
         <!-- FORM -->
         <form>
         <!-- Student Information -->
           <div class="col">
             <div class="row"> 
 
-              <div class="col-lg-8">  <!-- left side -->
+              <div class="col-lg-7">  <!-- left side -->
 
                 <h5 class="sm-headings"> Particulars </h5>
                 <div id="addParticulars">
                   <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-sm-5">
                       <label>Particular Name:</label>
                         <input type="text" class="form-control" required>
                     </div>
@@ -107,7 +93,7 @@
 
               </div> <!-- left side -->
 
-              <div class="col-lg-4"> <!-- Right side -->
+              <div class="col-lg-5"> <!-- Right side -->
 
                 <div class="card" id="paymentSummary">
                   <div class="card-block">
@@ -119,7 +105,51 @@
                         </div>
                         <div class="col-md-6">
                           <div class="float-right">
-                            <p class="form-control-static">0001</p>
+                            <input type="text" class="form-control" id="ORNumber"> </p> 
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h6> Date </h6>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="float-right">
+                            <p class="form-control-static" id="transactionDate"> </p> 
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h6> Student ID </h6>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="float-right">
+                            <p class="form-control-static" id="studentID"> 00001 </p> <!-- get from previous form-->
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h6> Student Name </h6>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="float-right">
+                            <p class="form-control-static" id="studentName"> Jane Doe </p> <!-- get from previous form-->
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="col-md-6">
+                          <h6> Grade Level </h6>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="float-right">
+                            <p class="form-control-static" id="studentLevel"> Grade 12 </p> <!-- get from previous form-->
                           </div>
                         </div>
                       </div>
@@ -129,21 +159,20 @@
                       <h5 class="sm-headings"> Mode of Payment </h5>
                       <div class="row">
                         <div class="col-md-4">
-                          <label class="custom-control custom-radio">
-                            <input id="radioCashPayment" name="radio-payment" type="radio" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                            <span class="custom-control-description">Cash</span>
-                          </label>
+                            <input id="btnCashPayment" type="button" class="btn btn-link" value="Cash">
                         </div>
-                      </div>
-                      <div class="row">
                         <div class="col-md-4">
-                          <label class="custom-control custom-radio">
-                            <input id="radioCheckPayment" name="radio-payment" type="radio" class="custom-control-input">
-                            <span class="custom-control-indicator"></span>
-                            <span class="custom-control-description">Check</span>
-                          </label>
-                        </div>
+                            <input id="btnCheckPayment" type="button" class="btn btn-link" value="Check">
+                        </div> 
+                        <div class="col-md-4">
+                            <input id="btnPromNote" type="button" class="btn btn-link" value="Promissory Note"> 
+                            <!-- if this button is clicked, 
+                                    it will open a new "_self" window, 
+                                    once it clicks save it must revert back to the transaction view
+                                if promissory note is accessed thru settings or not via transaction view
+                                    it must revert back to its list view
+                            -->
+                        </div> 
                       </div>
 
                       <div id="cashMode" >
@@ -193,11 +222,11 @@
 
                       <div class="row">
                         <div class="col-md-7">
-                          <h2> Total Amount Due </h2>
+                          <h3> Total Amount Due </h3>
                         </div>
                         <div class="col-md-5">
                           <div class="float-right">
-                            <p class="form-control-static"> <h2 class="amount-emphasis"> ₱ 8,580.00 </h1> </p>
+                            <p class="form-control-static"> <h3 class="amount-emphasis"> ₱ 8,580.00 </h3> </p>
                           </div>
                         </div>
                       </div>
@@ -235,7 +264,7 @@
           
           <div class="btn-forms" style="display: flex; justify-content: flex-end">
             <a href="scholarship-list.html" class="btn btn-link">Cancel</a>
-            <a href="#" class="btn btn-primary "><i class="fa fa-check-circle" aria-hidden="true"></i> Create Payment Transaction </a>
+            <a href="#" class="btn btn-primary"><i class="fa fa-check-circle" aria-hidden="true"></i> Create Payment Transaction </a>
           </div>
 
         </form>
@@ -255,97 +284,12 @@
   <script src="02-javascript/bootstrap.js"></script>
   <script src="02-javascript/bootstrap.min.js"></script>
 
-    <script>
-      var today = new Date(month, day, year);
-      var dd = today.getDate();
-      var mm = today.getMonth()+1; //January is 0!
-
-      var yyyy = today.getFullYear();
-      if(dd<10){
-          dd='0'+dd;
-      } 
-      if(mm<10){
-          mm='0'+mm;
-      } 
-      var today = dd+'/'+mm+'/'+yyyy;
-      document.getElementById("currentDate").value = today;
-    </script>
-
-    <script>
-      function startTime() {
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
-
-        var text = "";
-
-        h = checkHour(h);
-        m = checkTime(m);
-        s = checkTime(s);
-        text = getCurrentTime(h);
-         document.getElementById('currentTime').innerHTML = h + ":" + m + ":" + s + text;
-        var t = setTimeout(startTime, 500);
-      }
-      function getText(h, m, s) {
-        if if (i >= 13 && i <= 24) {
-          //PM
-         return " PM";
-        }
-        else {
-          //AM
-          return " AM";
-        }
-      }
-
-      function checkTime(i) {
-          if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-          return i;
-      }
-      function checkHour(i) {
-        if (i >= 13 && i <= 24) {
-          switch (i) {
-            case 13:
-              return i = 1;
-              break;
-            case 14:
-              return i = 2;
-              break;
-            case 15:
-              return i = 3;
-            case 16:
-              return i = 4;
-              break;
-            case 17:
-              return i = 5;
-              break;
-            case 18:
-              return i = 6;
-              break;
-            case 19:
-              return i = 7;
-              break;
-            case 20:
-              return i = 8;
-              break;
-            case 21:
-              return i = 9;
-              break;
-            case 22:
-              return i = 10;
-              break;
-            case 23:
-              return i = 11;
-              break;
-            case 24:
-              return i = 12;
-              break;
-          }
-        }
-        else {
-          return i = i;
-        }
-      }
+   <script>
+    var d = new Date();
+    var y = d.getFullYear();
+    var day = d.getDate();
+    var m = d.getMonth() + 1;
+    document.getElementById("transactionDate").innerHTML = m + "/" + day + "/" + y;
     </script>
 
     <script>
@@ -379,8 +323,8 @@
 
     <script>
     $(document).ready(function() {
-       $('input[type="radio"]').click(function() {
-        if($(this).attr('id') == 'radioCashPayment') {
+       $('input[type="button"]').click(function() {
+        if($(this).attr('id') == 'btnCashPayment') {
               $('#cashMode').show();           
          }
 
@@ -388,12 +332,15 @@
               $('#cashMode').hide();   
          }
 
-         if($(this).attr('id') == 'radioCheckPayment') {
+         if($(this).attr('id') == 'btnCheckPayment') {
               $('#checkMode').show();           
          }
 
          else {
               $('#checkMode').hide();   
+         }
+         if($(this).attr('id') == 'btnPromNote') {
+            window.open("cashier-promissory-list-add.html", "_self");
          }
        });
     });
